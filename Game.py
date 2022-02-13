@@ -1,14 +1,15 @@
 #importing required modules
 
 import curses
+import random
+import time
+from curses import wrapper
+
 #The curses library supplies a terminal-independent screen-painting and keyboard-handling facility for text-based terminals
 
-from curses import wrapper
 #The wrapper() function takes a callable object and initializes the terminal
 
-import time
 
-import random
 
 
 def start_screen(stdscr):
@@ -50,7 +51,6 @@ def display_text(stdscr,target,current,wpm=0):
             stdscr.addstr(0,i,char,curses.color_pair(2))
 
 #displays the typed text over the target text
-
 
 def wpm_test(stdscr):
 
